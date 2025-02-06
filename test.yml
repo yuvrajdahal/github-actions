@@ -1,0 +1,9 @@
+name: Ali
+age: 28
+address: "hehe"
+active: true
+key:
+    key: value
+    key2: 33
+
+jsonObject: {key: value, key2: 33}
