@@ -1,0 +1,13 @@
+name: Docker
+on: push
+
+jobs:
+  docker-steps:
+    runs-on: ubuntu-latest
+    container: node:latest
+    steps:
+    - name: send a slack message
+      uses: docker://technosophos/slack-notify
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        SLACK_MESSAGE: "Hello World"
