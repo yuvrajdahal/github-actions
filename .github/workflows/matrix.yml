@@ -1,0 +1,13 @@
+name: matrix
+on: push
+
+jobs:
+  node-version:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Log
+       run: node -v
+     - uses: actions/checkout@v3
+       with:
+         node-version: 16
+         run: node -v

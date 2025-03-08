@@ -1,6 +1,6 @@
 name: Shell commands
 
-on: [push]
+on: [push,pull_request]
 
 jobs:
   run-shell-commands: 
@@ -9,6 +9,7 @@ jobs:
       - name: echo a string
         run: echo "Hello, world!"
       - name: multiline script
+        if: failure()
         run: |
           node -v
           npm -v
