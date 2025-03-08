@@ -9,5 +9,5 @@ jobs:
     - name: send a slack message
       uses: docker://technosophos/slack-notify
       env:
-        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         SLACK_MESSAGE: "Hello World"
